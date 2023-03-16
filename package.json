@@ -9,7 +9,9 @@
     "dev": "yarn compile && yarn next dev",
     "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "yarn next start",
-    "sitemap": "yarn next-sitemap"
+    "sitemap": "yarn next-sitemap",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
@@ -45,6 +47,7 @@
     "eslint-plugin-react-native": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.8",
     "postcss-preset-env": "^7.4.2",
     "prettier": "^2.5.1",
@@ -60,5 +63,6 @@
   },
   "resolutions": {
     "autoprefixer": "10.4.5"
-  }
+  },
+  "homepage": "https://pneug.github.io/pneug.github.io/"
 }
